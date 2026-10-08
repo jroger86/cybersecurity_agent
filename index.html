@@ -1,1 +1,57 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cybersecurity Agent</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Security Operations</p>
+          <h1>Cybersecurity Agent</h1>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel input-panel">
+          <h2>Analysis Request</h2>
+
+          <label for="apiKey">Gemini API Key</label>
+          <input id="apiKey" type="password" placeholder="Enter Gemini API key" />
+
+          <label for="taskType">Task Type</label>
+          <select id="taskType">
+            <option value="">Select a task</option>
+            <option value="vulnerability_scan">Vulnerability Scan</option>
+            <option value="code_review">Security Code Review</option>
+            <option value="password_strength">Password Strength Analysis</option>
+            <option value="threat_assessment">Threat Assessment</option>
+            <option value="compliance_check">Compliance Check</option>
+            <option value="malware_analysis">Malware Analysis</option>
+          </select>
+
+          <label for="userInput">Input or </label>
+          <textarea id="userInput" rows="10" placeholder="Paste code, a URL, a policy, a password example, or a suspected malware description..."></textarea>
+
+          <button id="analyzeBtn" class="primary-btn">Analyze</button>
+        </section>
+
+        <section class="panel output-panel">
+          <div class="output-header">
+            <h2>Results</h2>
+            <button id="copyBtn" class="secondary-btn hidden">Copy</button>
+          </div>
+          <div id="results" class="results-box">
+            <p class="placeholder">Your findings will appear here.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
